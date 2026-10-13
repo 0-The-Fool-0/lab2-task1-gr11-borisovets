@@ -1,33 +1,34 @@
-# Lab 2 Task 1
+# Lab 2 — Максимальная сумма цифр в массиве (C)
 
-Author: Andrey Borisovets  
-Group: gr11
+[Русская версия](README.ru.md)
 
-## Overview
+A small command-line C exercise. It generates an array of pseudo-random positive integers, calculates the sum of decimal digits for each value, and prints every number whose digit sum is maximal.
 
-Console program written in C.
+## Build
 
-The program generates an array of numbers and finds the number with the maximum sum of digits.
+Requirements: a C compiler with C99 support (for example, GCC or Clang).
 
-## Usage
+```bash
+gcc -std=c99 -Wall -Wextra -Wpedantic src/main.c -o lab2-task1
+```
 
-Run program with array size argument.
+## Run
 
-Example:
+Pass the desired array size as the only argument:
 
-./labrabota2-1 10
+```bash
+./lab2-task1 10
+```
 
-## Building
+The program generates values from 1 to 1000. Because the array is generated randomly, the output changes between runs. The accepted size is from 1 to 1,000,000.
 
-gcc -o labrabota2-1 src/main.
-# Overview
+On Windows, run the executable produced by your configured C compiler. The command above is a GCC/Clang example.
 
-It is public template of assignment `"labrabota 3"` for FPMI students
+## Algorithm
 
-# Usage
+1. Generate the requested number of positive integers.
+2. Compute the digit sum of every element.
+3. Find the maximum digit sum.
+4. Print all elements whose digit sum equals that maximum.
 
-Please, edit README and add some details, as instance **{add your last name, first name and group number}**.
-
-# Building
-
-Please, import repository and use for repl.it project, which is defined in the assignment "labrabota 3".
+The source had duplicated conflict-marker sections from an unresolved Git merge; this version keeps a single implementation and validates the size argument before allocation.
